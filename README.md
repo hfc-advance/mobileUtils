@@ -24,7 +24,7 @@ easeVerticalScroll(target, scrollDOM)
 参数 | 是否必传 | 类型 | 简介
 --- | --- | --- | ---
 target | true | Element | 要滚动到指定位置的元素
-scrollDOM | true | Element | 目标元素`target`处于的滚动元素
+scrollDOM | true | Element | 目标元素`target`处于的滚动元素
 
 #### EleDistanceEle子元素与父元素之间的距离
 ```javascript
