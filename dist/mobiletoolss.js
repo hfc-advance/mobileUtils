@@ -1,13 +1,13 @@
 /*!
- * mobiletools.js v1.0.0
- * (c) 2018-2018 
+ * mobiletoolss.js v1.0.2
+ * (c) 2018-2018 崔海峰
  * Released under the MIT License.
  */
 (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
-  typeof define === 'function' && define.amd ? define(factory) :
-  (global.mobiletools = factory());
-}(this, (function () { 'use strict';
+  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
+  typeof define === 'function' && define.amd ? define(['exports'], factory) :
+  (factory((global.mobiletoolss = {})));
+}(this, (function (exports) { 'use strict';
 
   //! 判断浏览器是否支持scroll-behavior
   function isSupportSmoothScroll() {
@@ -129,6 +129,10 @@
     EleDistanceEle
   };
 
-  return main;
+  exports.easeVerticalScroll = easeVerticalScroll;
+  exports.EleDistanceEle = EleDistanceEle;
+  exports.default = main;
+
+  Object.defineProperty(exports, '__esModule', { value: true });
 
 })));

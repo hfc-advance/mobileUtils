@@ -1,10 +1,8 @@
 /*!
- * mobiletools.js v1.0.0
- * (c) 2018-2018 
+ * mobiletoolss.js v1.0.2
+ * (c) 2018-2018 崔海峰
  * Released under the MIT License.
  */
-'use strict';
-
 //! 判断浏览器是否支持scroll-behavior
 function isSupportSmoothScroll() {
   let isSupport = !!window.getComputedStyle(document.body).scrollBehavior;
@@ -125,4 +123,5 @@ var main = {
   EleDistanceEle
 };
 
-module.exports = main;
+export default main;
+export { easeVerticalScroll, EleDistanceEle };

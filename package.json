@@ -1,8 +1,9 @@
 {
   "name": "mobiletoolss",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "",
-  "main": "./dist/mobiletoolss.esm.js",
+  "main": "dist/mobiletoolss.cjs.js",
+  "module": "dist/mobiletoolss.esm.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "#": "清除文件",
@@ -15,7 +16,12 @@
     "dev": "webpack-dev-server --mode development --progress"
   },
   "keywords": ["tools", "cuihaifeng", "崔海峰", "utils", "dom"],
-  "author": "",
+  "files": [
+    "src",
+    "dist",
+    "test"
+  ],
+  "author": "崔海峰",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^9.1.5",

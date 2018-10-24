@@ -1,5 +1,9 @@
 
 import { easeVerticalScroll, EleDistanceEle } from './dom.js'
+export {
+  easeVerticalScroll,
+  EleDistanceEle
+}
 export default {
   //! 平滑滚动
   easeVerticalScroll,
