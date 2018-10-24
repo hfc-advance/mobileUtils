@@ -1,6 +1,8 @@
 
-import { easeVerticalScroll } from './dom.js'
+import { easeVerticalScroll, EleDistanceEle } from './dom.js'
 export default {
   //! 平滑滚动
-  easeVerticalScroll
+  easeVerticalScroll,
+  //! 计算两个元素之间的距离
+  EleDistanceEle
 }

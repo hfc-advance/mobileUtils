@@ -1,3 +1,8 @@
+/*!
+ * mobileUtils.js v1.0.0
+ * (c) 2018-2018 
+ * Released under the MIT License.
+ */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
   typeof define === 'function' && define.amd ? define(factory) :
@@ -44,7 +49,7 @@
     if (!(target instanceof Element)) throw new Error(`target must be Element`);
     if (!(scrollDOM instanceof Element)) throw new Error(`scrollDOM must be Element`);
     //! 原生支持
-    if (!isSupportSmoothScroll()) {
+    if (isSupportSmoothScroll()) {
       target.scrollIntoView({
         behavior: 'smooth',
         block: 'start'
@@ -93,6 +98,11 @@
           document.body.scrollTop = document.documentElement.scrollTop = number;
         }
       };
+      //! 处理兼容性
+      let requestAnimationFrame = window.requestAnimationFrame || window.webkitRequestAnimationFrame || function (callback) {
+        return setTimeout(callback, 1000 / 60);
+      };
+      let cancelAnimationFrame = window.cancelAnimationFrame || window.webkitCancelAnimationFrame || window.clearTimeout;
       let timer = requestAnimationFrame(function fn() {
         //! 当前相差多少
         let currentDistance = parseInt(targetPlace) - getScrollTop();
@@ -104,7 +114,7 @@
           initScrollCount += 1;
           let shouldScroll = currentDistance * 0.25;
           //! TODO:小于1的时候scrollTop设置了不会触发滚动
-          let shouldScrollTop = getScrollTop() + (shouldScroll < 1 ? 1 : shouldScroll);
+          let shouldScrollTop = getScrollTop() + (shouldScroll > 0 ? shouldScroll < 1 ? 1 : shouldScroll : shouldScroll > -1 ? -1 : shouldScroll);
           setScrollTop(shouldScrollTop);
           timer = requestAnimationFrame(fn);
         }
@@ -114,10 +124,11 @@
 
   var main = {
     //! 平滑滚动
-    easeVerticalScroll
+    easeVerticalScroll,
+    //! 计算两个元素之间的距离
+    EleDistanceEle
   };
 
   return main;
 
 })));
-//# sourceMappingURL=mobileUtils.js.map

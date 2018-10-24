@@ -2,7 +2,7 @@
   "name": "mobileUtils",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./dist/mobileUtils.esm.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "#": "清除文件",
