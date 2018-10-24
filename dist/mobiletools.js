@@ -1,12 +1,12 @@
 /*!
- * mobileUtils.js v1.0.0
+ * mobiletools.js v1.0.0
  * (c) 2018-2018 
  * Released under the MIT License.
  */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
   typeof define === 'function' && define.amd ? define(factory) :
-  (global.mobileUtils = factory());
+  (global.mobiletools = factory());
 }(this, (function () { 'use strict';
 
   //! 判断浏览器是否支持scroll-behavior

@@ -1,5 +1,5 @@
 /*!
- * mobileUtils.js v1.0.0
+ * mobiletools.js v1.0.0
  * (c) 2018-2018 
  * Released under the MIT License.
  */

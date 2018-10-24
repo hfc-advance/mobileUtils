@@ -5,13 +5,13 @@
 
 ### 怎么使用
 ```javascript
-npm install --save mobileUtils
+npm install --save mobiletoolss
 
 // ES6规范
-import { easeVerticalScroll, EleDistanceEle } from 'mobileUtils'
+import { easeVerticalScroll, EleDistanceEle } from 'mobiletoolss'
 
 // commonjs
-let { easeVerticalScroll, EleDistanceEle } = require('mobileUtils')
+let { easeVerticalScroll, EleDistanceEle } = require('mobiletoolss')
 
 // html引入
 <script src="https://js-1252842252.cos.ap-shanghai.myqcloud.com/mobileUtils1.0.0/index.min.js"></script>
